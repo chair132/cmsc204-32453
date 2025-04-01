@@ -87,8 +87,8 @@ public class CourseDBElement {
 		}
 		
 		CourseDBElement otherObj = (CourseDBElement) anotheObject;
-		//OVERHAUL
-		return ((courseID == null && otherObj.courseID==null)||this.courseID.equals(otherObj.courseID)) && this.CRN == otherObj.CRN && this.numOfCredits == otherObj.numOfCredits && (instructorName == null && otherObj.instructorName==null) || this.instructorName.equals(otherObj.instructorName) && this.roomNum.equals(otherObj.roomNum); 
+		
+		return ((courseID == null && otherObj.courseID==null)||this.courseID.equals(otherObj.courseID)) && this.CRN == otherObj.CRN && this.numOfCredits == otherObj.numOfCredits && ((instructorName == null && otherObj.instructorName==null) || this.instructorName.equals(otherObj.instructorName)) && (roomNum == null && otherObj.roomNum==null) || this.roomNum.equals(otherObj.roomNum); 
 	}
 	
 	public String toString() {
