@@ -33,29 +33,38 @@ public class CarPanel extends JComponent
 	               {
 	            	   direction = carQueue.deleteQueue();
 	            	   switch (direction) {
+	            	   //up
 	            	   		case 0:
 	            	   			y-=10;
 	            	   			break;
+	            	   	//down
 	            	   		case 1:
 	            	   			y+=10;
 	            	   			break;
+	            	   	//right
 	            	   		case 2:
 	            	   			x+=10;
 	            	   			break;
+	            	   	//left
 	            	   		case 3:
 	            	   			x-=10;
 	            	   			break;
 	            	   }
 	            	   
+	            	   //boundaries
 	            	   if(x < 0) {
 	            		   x+=10;
-	            	   } else if (x > 200) {
+	            	   } 
+	            	   
+	            	   if (x > 200) {
 	            		   x-=10;
 	            	   }
 	            	   
+	            	   
 	            	   if(y < 0) {
 	            		   y+=10;
-	            	   } if (y > 200) {
+	            	   } 
+	            	   if (y > 200) {
 	            		   y-=10;
 	            	   }
 	            	   
